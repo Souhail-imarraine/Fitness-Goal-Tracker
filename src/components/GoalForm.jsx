@@ -4,7 +4,7 @@ import "./GoalForm.css";
 const initialState = {
   title: "",
   target: "",
-  unit: "steps", // default
+  unit: "steps", 
 };
 
 function GoalForm({ onAddGoal, onUpdateGoal, editGoal }) {
@@ -32,9 +32,9 @@ function GoalForm({ onAddGoal, onUpdateGoal, editGoal }) {
     if (!formData.title || !formData.target) return;
 
     if (editGoal) {
-      onUpdateGoal(formData); // mode modification
+      onUpdateGoal(formData); 
     } else {
-      onAddGoal({ ...formData, id: Date.now(), progress: 0 }); // mode ajout
+      onAddGoal({ ...formData, id: Date.now(), progress: 0 }); 
     }
 
     setFormData(initialState); // reset
